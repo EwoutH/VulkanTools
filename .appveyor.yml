@@ -71,3 +71,7 @@ build:
   parallel: true                  # enable MSBuild parallel builds
   project: build/VULKAN_TOOLS.sln # path to Visual Studio solution or project
   verbosity: quiet                # quiet|minimal|normal|detailed
+
+artifacts:
+    - path: bin\Release\*.*
+      name: $(APPVEYOR_PROJECT_NAME)
