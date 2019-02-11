@@ -11,19 +11,18 @@ version: "{build}"
 # Free accounts have a max of 1, but ask anyway.
 max_jobs: 4
 
-os:
-  - Visual Studio 2013
+image: Visual Studio 2017
 
 environment:
-  PYTHON_PATH: "C:/Python35"
-  PYTHON_PACKAGE_PATH: "C:/Python35/Scripts"
+  PYTHON_PATH: "C:/Python37"
+  PYTHON_PACKAGE_PATH: "C:/Python37/Scripts"
 
 branches:
   only:
     - master
 
 before_build:
-  - "SET PATH=C:\\Python35;C:\\Python35\\Scripts;%PATH%"
+  - "SET PATH=C:\\Python37;C:\\Python37\\Scripts;%PATH%"
   - echo.
   - echo Starting build for %APPVEYOR_REPO_NAME%
   - echo Update external sources
